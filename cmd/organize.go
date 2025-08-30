@@ -198,7 +198,7 @@ func getFolders(path string) ([]string, error) {
 	}
 
 	for _, entry := range entries {
-		if entry.IsDir() && entry.Name() != "00_Inbox" {
+		if entry.IsDir() && entry.Name() != "00_Inbox" && entry.Name() != "Projects" {
 			folders = append(folders, entry.Name())
 		}
 	}
